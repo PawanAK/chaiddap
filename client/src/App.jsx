@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react'
 import {ethers} from "ethers"
+import abi from "../contractJson/chai.json"
 import './App.css'
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
   const [account,setAccount]=useState('Not connected');
   useEffect(()=>{
     const template=async()=>{
+      const contractAddres="0x3a12eabeBe4623DFDe610d6F518096036C4d6bA1";
+      const contractABI=abi.abi;
   
       //Metamask part
       //1. In order do transactions on goerli testnet
